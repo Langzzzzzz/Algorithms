@@ -79,7 +79,7 @@ def test():
         advList.append(random.randint(1, 500))
     print("Original list: ")
     print(advList)
-    bubbleSort(advList)
+    advancedBubbleSort(advList)
     print("Sorted list: ")
     print(advList)
 
