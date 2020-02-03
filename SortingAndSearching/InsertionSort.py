@@ -19,6 +19,7 @@ def compare(a, b):
     else:
         return 0
 
+
 '''
     insertion sort
     Function: insertionSort()
@@ -46,7 +47,7 @@ def insertionSort(arr):
 
         currentIndex = len(out) - 1
         # while that item is out of order
-        while currentIndex > 0 and compare(out[currentIndex - 1], out[currentIndex]) ==1:
+        while currentIndex > 0 and compare(out[currentIndex - 1], out[currentIndex]) == 1:
             # swap left
             temp = out[currentIndex]
             out[currentIndex] = out[currentIndex - 1]
@@ -57,7 +58,8 @@ def insertionSort(arr):
     # return the output list
     return out
 
-def test():
+
+def main():
     print("Test Insertion sort: ")
     numList = []
     for i in range(50):
@@ -78,4 +80,6 @@ def test():
     print("Sorted list: ")
     print(sortedStringList)
 
-test()
+
+if __name__ == '__main__':
+    main()

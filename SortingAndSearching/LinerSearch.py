@@ -1,16 +1,18 @@
 import random
 
 '''
+    purpose: To check target is in the list or not
     arr: List of number
     target: number, our target to find
 '''
+
 def linearSearch(arr,target):
     for i in range(len(arr)):
         if arr[i] == target:
             return True
     return False
 
-def test():
+def main():
     numList = []
     for i in range(10):
         numList.append(random.randint(1,30))
@@ -22,4 +24,5 @@ def test():
     else:
         print("NOT FOUND!!!")
 
-test()
+if __name__ == '__main__':
+    main()

@@ -60,7 +60,7 @@ def advancedBubbleSort(arr):
     return
 
 
-def test():
+def main():
     print("Test Basic bubble sort: ")
     numList = []
     for i in range(50):
@@ -94,4 +94,6 @@ def test():
     print(strList)
 
 
-test()
+if __name__ == '__main__':
+    main()
+
