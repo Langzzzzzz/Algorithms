@@ -12,13 +12,17 @@ from SortingAndSearching.InsertionSort import insertionSort
 def binarySearch(arr, target):
     low = 0
     high = len(arr)
+    # base case to stop
     while low <= high:
         median = (low + high) // 2
+        # found target in the list
         if arr[median] == target:
             return True
         else:
+            # if median greater than target, only find in first half
             if arr[median] > target:
                 high = median - 1
+            # if median smaller than target, only find in second half
             else:
                 low = median + 1
     return False
