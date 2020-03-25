@@ -29,34 +29,57 @@ def compare(a, b):
 '''
 
 
-def insertionSort(arr):
-    # start with an empty output list
-    out = []
+# def insertionSort(arr):
+#     # start with an empty output list
+#     out = []
+#
+#     # copy the input (to prevent mutation)
+#     arr = arr[:]
+#
+#     # until the input is empty
+#     while len(arr) > 0:
+#
+#         # take the first item out of input
+#         item = arr.pop(0)
+#
+#         # add it to the end of output
+#         out.append(item)
+#
+#         currentIndex = len(out) - 1
+#         # while that item is out of order
+#         while currentIndex > 0 and compare(out[currentIndex - 1], out[currentIndex]) == 1:
+#             # swap left
+#             temp = out[currentIndex]
+#             out[currentIndex] = out[currentIndex - 1]
+#             out[currentIndex - 1] = temp
+#
+#             currentIndex -= 1
+#
+#     # return the output list
+#     return out
 
-    # copy the input (to prevent mutation)
-    arr = arr[:]
+def insertionSort(unsortedList):
+    lis = unsortedList[:]
 
-    # until the input is empty
-    while len(arr) > 0:
+    output = []
 
-        # take the first item out of input
-        item = arr.pop(0)
+    while len(lis) != 0:
+        item = lis.pop(0)
 
-        # add it to the end of output
-        out.append(item)
+        output.append(item)
 
-        currentIndex = len(out) - 1
-        # while that item is out of order
-        while currentIndex > 0 and compare(out[currentIndex - 1], out[currentIndex]) == 1:
-            # swap left
-            temp = out[currentIndex]
-            out[currentIndex] = out[currentIndex - 1]
-            out[currentIndex - 1] = temp
+        index = len(output) - 1
+        # swap left until its in place
+        while index > 0 and output[index - 1] > output[index]:
+            # swap
+            temp = output[index - 1]
+            output[index - 1] = output[index]
+            output[index] = temp
+            index = index - 1
 
-            currentIndex -= 1
+        # output[index-1],output[index]=output[index],output[index-1]
 
-    # return the output list
-    return out
+    return output
 
 
 def main():
