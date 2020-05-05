@@ -14,4 +14,4 @@ def quickSort(arr):
                 less.append(i)
         return quickSort(less) + [pivot] + quickSort(greater)
 
-print(quickSort([10,23,1,8,123,9,2130,1230]))
+print(quickSort([23,10]))
